@@ -2,9 +2,14 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Menu, Moon, Sun, X } from "lucide-react";
 
-const Navbar = ({darkMode, toggleDarkMode}) => {
-    const [activeSection, setActiveSection] = useState('home');
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
+type Props = {
+    darkMode: boolean;
+    toggleDarkMode: () => void;
+};
+
+const Navbar = ({darkMode, toggleDarkMode}: Props) => {
+    const [activeSection, setActiveSection] = useState<string>('home');
+    const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
     const navItems = [
         {name: 'Home', link: '#home'},
