@@ -41,7 +41,7 @@ const Navbar = ({darkMode, toggleDarkMode}: Props) => {
 
     const colors = darkMode ? darkColors : lightColors;
 
-    const handleNavClick = (itemName) => {
+    const handleNavClick = (itemName:string) => {
         setActiveSection(itemName.toLowerCase());
         setIsMenuOpen(false);
     }
