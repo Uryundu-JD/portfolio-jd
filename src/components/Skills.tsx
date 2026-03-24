@@ -5,8 +5,19 @@ import triDmodel from '../assets/3dmodel.png';
 import calibration from '../assets/calibration.png';
 import pcb from '../assets/pcb.png';
 
-const Skills = ({darkMode}) => {
-    const skills = [
+type Props = {
+    darkMode: boolean;
+};
+
+type skill = {
+    name: string;
+    image: string;
+    level: number;
+    color: string;
+};
+
+const Skills = ({darkMode}: Props) => {
+    const skills: skill[] = [
         {name: 'Mobile Application Development', image:mobiledev, level:100,
         color:'from-teal-500 to-cyan-500'},
         {name: 'Game Development', image:gamedev, level:100,
@@ -91,20 +102,7 @@ const Skills = ({darkMode}) => {
                                         {skill.name}
                                     </h3>
                                 </div>
-                                {/* <div className='mb-2 flex justify-between items-center'>
-                                    <span className='font-medium'
-                                    style={{color: darkMode ? '#d1d5db' : '#6b7280'}}>
-                                        Proficiency
-                                    </span>
-                                    <span
-                                    style={{background:'linear-gradient(to right, #f97316, #f59e0b)',
-                                    WebkitBackgroundClip:'text',
-                                    backgroundClip:'text',
-                                    color:'transparent'}}
-                                    className='font-bold'>
-                                        {skill.level}%
-                                    </span>
-                                </div> */}
+                                
                                 <div className='w-full rounded-full h-3 overflow-hidden'
                                 style={{color: darkMode ? '#374151' : '#e5e7eb'}}
                                 >

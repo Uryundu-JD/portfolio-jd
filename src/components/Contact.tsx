@@ -1,13 +1,22 @@
 import contact from '../assets/contact.png'
 
-const Contact = ({darkMode}) => {
+type Props = {
+    darkMode: boolean;
+};
 
-    const inputNameItems = [
+type inputItem = {
+    placeholder:string, 
+    type:string,
+};
+
+const Contact = ({darkMode}: Props) => {
+
+    const inputNameItems: inputItem[] = [
         {placeholder:'First Name', type:'text'},
         {placeholder:'Last Name', type:'text'},
     ];
 
-    const inputExtraItems = [
+    const inputExtraItems: inputItem[] = [
         {placeholder:'Email Address', type:'email'},
         {placeholder:'Phone Number', type:'tel'},
     ];

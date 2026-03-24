@@ -2,7 +2,11 @@
 import linkedin from '../assets/linkedin.png'
 import github from '../assets/github.png'
 
-const Footer = ({darkMode}) => {
+type Props = {
+    darkMode: boolean;
+};
+
+const Footer = ({darkMode}: Props) => {
     const currYear = new Date().getFullYear();
   return (
     <footer

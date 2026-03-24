@@ -9,9 +9,18 @@ import JD_Oriondo_CV from '../assets/JD_Oriondo-CV.pdf';
 import jdIMG from '../assets/jdIMG.png'
 import { DownloadIcon, Mail } from 'lucide-react';
 
-function Hero({darkMode}) {
+type Props = {
+    darkMode: boolean;
+};
 
-    const socialIcons = [
+type socialIcon = {
+    icon: string;
+    alt: string;
+};
+
+function Hero({darkMode}: Props) {
+
+    const socialIcons: socialIcon[] = [
         {icon:react, alt:'react'},
         {icon:django, alt:'django'},
         {icon:unity3D, alt:'unity3D'},
@@ -19,7 +28,7 @@ function Hero({darkMode}) {
         {icon:arduino, alt:'arduino'},
     ];
 
-    const prevExp = [
+    const prevExp: string[] = [
         'Mobile Application Developer',
         'Front-End Developer',
         'Full-Stack Developer',
@@ -86,24 +95,6 @@ function Hero({darkMode}) {
                                 className={`text-orange-500`}>/</span>
                             </h2>
                         ))}
-                        
-                        {/* <p className={`mb-6 sm:mb-8 leading-relaxed max-w-md
-                        sm:max-w-lg ${theme.textSecondary}`}
-                        data-aos='fade-up'
-                        data-aos-delay='600'>
-                        A skilled Computer Engineering graduate 
-                        specializing in Mobile Application Development, 
-                        with strong expertise in software and web 
-                        technologies. Proven ability to design, develop, 
-                        and deploy user-focused mobile applications that 
-                        enhance performance, usability, and business efficiency. 
-                        Also my professional experience as a Calibration 
-                        Technician has strengthened my analytical skills, 
-                        attention to detail, and ability to optimize processes 
-                        while ensuring compliance with industry standards. 
-                        Committed to delivering high-quality, scalable mobile 
-                        solutions that drive measurable results.
-                        </p> */}
 
                         <div className='w-full pt-4 sm:pt-6'>
                             <div className='flex flex-col sm:flex-row justify-center
@@ -151,13 +142,6 @@ function Hero({darkMode}) {
                                 rounded-full transition-transform duration-500'
                                 />
                             </div>
-                            {/* <img 
-                            src={linkedin}
-                            alt="Float icon"
-                            className='absolute -top-1 sm:top-4 right-12
-                            sm:right-20 w-14 h-14 sm:w-20 sm:h-20 object-contain
-                            animate-bounce opacity-90 -10'
-                            /> */}
                         </div>
                     </div>
                 </div>

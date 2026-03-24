@@ -9,9 +9,21 @@ import games from '../assets/games.jpg';
 import tipi from '../assets/tipi.jpg';
 import moog from '../assets/moog.jpg';
 
+type Props = {
+    darkMode: boolean;
+};
 
-const Projects = ({darkMode}) => {
-    const projects = [
+type project = {
+    id: number;
+    title: string;
+    desc:string;
+    image:string;
+    tags:string[];
+    company:string;
+};
+
+const Projects = ({darkMode}: Props) => {
+    const projects: project[] = [
         {
             id:1,
             title:'Investa, InvestaFunds, and InvestaTrade',

@@ -1,7 +1,12 @@
 
 
 import avatar from '../assets/avatar.png';
-const About = ({darkMode}) => {
+
+type Props = {
+    darkMode: boolean;
+};
+
+const About = ({darkMode}: Props) => {
 
 
     const aboutItems = [
