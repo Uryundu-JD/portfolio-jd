@@ -23,8 +23,8 @@ const Footer = ({darkMode}: Props) => {
             items-center gap-6">
                 <div className="text-center md:text-left">
                     <h2
-                    className="text-2xl font-bold mb-2 text-orange-500 dark:text-white"
-                    >
+                    className="text-2xl mb-2 text-orange-500 dark:text-white"
+                    style={{fontFamily:"OldLondon"}}>
                         JD Oriondo
                     </h2>
                     <p

@@ -63,8 +63,8 @@ const Navbar = ({darkMode, toggleDarkMode}: Props) => {
                     className="flex items-center space-x-2"
                     >
                         <span
-                        className={`text-xl font-bold ${colors.textPrimary}`}>
-                            JD Oriondo
+                        className={`text-xl ${colors.textPrimary}`} style={{fontFamily:"OldLondon"}}>
+                            JD
                             {/* <span 
                             className={`text-orange-500`}>.</span> */}
                         </span>   
